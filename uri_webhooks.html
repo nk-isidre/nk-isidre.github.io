@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webhook</title>
+  </head>
+  <body>
+    <h1>Webhook</h1>
+    <p>Escuchando en /webhook...</p>
+  </body>
+
+  <script>
+    // Escucha las solicitudes entrantes en la ruta /webhook
+    fetch("/webhook", {
+      method: "POST"
+    })
+      .then(response => response.json()) // Procesa la respuesta como JSON
+      .then(data => console.log(data)); // Muestra la respuesta en la consola
+  </script>
+</html>
